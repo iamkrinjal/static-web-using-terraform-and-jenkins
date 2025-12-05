@@ -2,10 +2,7 @@ provider "aws" {
   region = "us-east-1"
 }
 
-resource "aws_key_pair" "tf-key" {
-  key_name   = "static-key"
-  public_key = file("~/.ssh/id_rsa.pub")
-}
+
 
 resource "aws_security_group" "tf-sg" {
   name        = "allow-http"
@@ -29,7 +26,7 @@ resource "aws_security_group" "tf-sg" {
 resource "aws_instance" "web" {
   ami           = "ami-0c02fb55956c7d316" # Amazon Linux 2
   instance_type = "t2.micro"
-  key_name      = aws_key_pair.tf-key.key_name
+  key_name      = "terraform"
   security_groups = [aws_security_group.tf-sg.name]
 
   user_data = file("userdata.sh")
