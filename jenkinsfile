@@ -3,10 +3,10 @@ pipeline {
 
   environment {
     DEPLOY_USER        = 'ubuntu'
-    DEPLOY_HOST        = '172.31.12.118'
+    DEPLOY_HOST        = '54.242.181.242'
     DEPLOY_PATH        = '/var/www/html'
-    SSH_CREDENTIALS_ID = 'node-app-key'
-    REPO_URL           = 'https://github.com/aniketchougule108/static-website-project-terraform-jenkins.git'
+    SSH_CREDENTIALS_ID = 'static-web'
+    REPO_URL           = 'https://github.com/iamkrinjal/static-web-using-terraform-and-jenkins'
     BRANCH             = 'main'
   }
 
