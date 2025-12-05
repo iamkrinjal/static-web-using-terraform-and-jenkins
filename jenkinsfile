@@ -3,7 +3,7 @@ pipeline {
 
   environment {
     DEPLOY_USER        = 'ubuntu'
-    DEPLOY_HOST        = '54.242.181.242'
+    DEPLOY_HOST        = '100.31.116.247'
     DEPLOY_PATH        = '/var/www/html'
     SSH_CREDENTIALS_ID = 'static-website'
     REPO_URL           = 'https://github.com/iamkrinjal/static-web-using-terraform-and-jenkins'
