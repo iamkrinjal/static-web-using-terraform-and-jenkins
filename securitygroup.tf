@@ -20,6 +20,7 @@ resource "aws_security_group" "staticweb_sg" {
   }
 
   egress {
+    description = "allow all traffic"
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
